@@ -1,4 +1,135 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,bm,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[legalpaper, portrait, margin=1in]{geometry}
+\graphicspath{ {./} }
+
 \begin{document}
-    \text{Find the values of x, y, and z}
+\section*{Question}
+\text{Given the following equations, find the values of x, y, and z}
+$$
+\begin{cases}
+    2\cos x\sin y + 4\sin y - 3\cos x = -4 \\
+    8\sin y\sin z\cos z\cos 2z - 6\sin 2z\cos 2z + 4\sin y = -9 \\
+    4\cos x\cos z\cos 2z\sin z + 2\cos x + 4\sin 2z\cos 2z = 2
+\end{cases}
+$$
+
+\section*{Solution}
+\subsection*{Simplifying the Equations}
+\text{Recall the double angle formula: }$$\sin 2x = 2\sin x\cos x \\$$
+The first equation has no terms in which we may apply the double angle formula to, therefore we leave it as is.
+\text{Looking at the second equation: } $$8\sin y\sin z\cos z\cos 2z - 6\sin 2z\cos 2z + 4\sin y = -9 \\$$
+\text{We can simplify it: }
+
+\begin{equation}
+    \begin{split}
+        8\sin y\sin z\cos z\cos2z-6\sin2z\cos2z+4\sin y=-9 \\
+        4\sin y\cos2z\left(2\sin z\cos z\right)-3\left(2\sin2z\cos2z\right)+4\sin y=-9 \\
+        4\sin y\cos2z\left(\sin2z\right)-3\left(\sin2\left(2z\right)\right)+4\sin y=-9 \\
+        4\sin y\cos2z\sin2z\ -\ 3\sin4z\ +\ 4\sin y\ =-9 \\
+        2\sin y\left(2\cos2z\sin2z\right)\ -\ 3\sin4z\ +\ 4\sin y\ =-9 \\
+        2\sin y\left(\sin2\left(2z\right)\right)\ -\ 3\sin4z\ +\ 4\sin y\ =-9 \\
+        2\sin y\sin4z\ -\ 3\sin4z\ +\ 4\sin y\ =-9 \\
+    \end{split}
+\end{equation}
+
+\text{The third equation can also be simplified: }
+\begin{equation}
+    \begin{split}
+        4\cos x\cos z\cos2z\sin z+2\cos x+4\sin2z\cos2z=2 \\
+        2\cos x\cos2z\left(2\sin z\cos z\right)\ +\ 2\cos x\ +\ 2\left(2\sin2z\cos2z\right)\ =\ 2 \\
+        2\cos x\cos2z\left(\sin2z\right)\ +\ 2\cos x\ +\ 2\left(\sin2\left(2z\right)\right)\ =\ 2 \\
+        2\cos x\cos2z\sin2z\ +\ 2\cos x\ +\ 2\sin4z\ =\ 2 \\
+        \cos x\left(2\cos2z\sin2z\right)\ +\ 2\cos x\ +\ 2\sin4z\ =\ 2 \\
+        \cos x\left(\sin2\left(2z\right)\right)\ +\ 2\cos x\ +\ 2\sin4z\ =\ 2 \\
+        \cos x\sin4z\ +\ 2\cos x\ +\ 2\sin4z\ =\ 2
+    \end{split}
+\end{equation}
+\subsection*{Factor by Grouping}
+Upon the completion of simplifying the the given equations, it is now possible to further simplify with the process of factoring. \newline
+Here are the newly simplified equations obtained from the last section:
+$$
+\begin{cases}
+    2\cos x\sin y+ 4\sin y-3\cos x = -4\\
+    2\sin y\sin 4z-3\sin 4z+4\sin y=-9 \\
+    \cos x\sin 4z + 2\cos x + 2\sin 4z = 2
+\end{cases}
+$$
+
+We can follow the steps for how to factor by grouping for the first equation:
+\begin{equation}
+    \begin{split}
+        2\cos x\sin y+ 4\sin y-3\cos x = -4\\
+        \text{the first two terms have a common factor of } 2\sin y \\
+        2\sin y(\cos x+2) - 3\cos x = -4\\
+        \text{we see the part inside the brackets is } \cos x+2 \\
+        2\sin y(\cos x+2) - 3\cos x-6+6= -4\\
+        \text{to obtain }\cos x+2\text{ from }3\cos\text{ we need to factor out a -3} \\
+        \text{because } -3\cos x \text{ has a coefficient of -3 and subtract 6} \\
+        \text{if we subtracted 6, we also need to add 6 to keep the equation balanced} \\
+        \text{now -3 can be factored out of the last two terms on the left side} \\
+        2\sin y(\cos x+2) - 3(\cos x+2) + 6= -4\\
+        \text{we can move the +6 to the other side of the equation} \\
+        \text{factor the left side by grouping} \\
+        2\sin y(\cos x+2) - 3(\cos x+2)= -10\\
+        (2\sin y-3)(\cos x+2)= -10
+    \end{split}
+\end{equation}
+The same concept can be applied for the second and third equation. Some algebraic rearrangements may be required. The factorization is left as an exercise for the reader. Solutions on next line:
+\begin{equation}
+    \begin{split}
+        2\sin y\sin 4z-3\sin 4z+4\sin y=-9 \\
+        2\sin y\sin 4z+4\sin y-3\sin 4z=-9 \\
+        2\sin y(\sin 4z+2)-3\sin 4z=-9 \\
+        2\sin y(\sin 4z+2)-3\sin 4z-6+6=-9 \\
+        2\sin y(\sin 4z+2)-3(\sin 4z+2)+6=-9 \\
+        2\sin y(\sin 4z+2)-3(\sin 4z+2)=-15 \\
+        (2\sin y-3)(\sin 4z+2)=-15
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        \cos x\sin 4z + 2\cos x + 2\sin 4z = 2 \\
+        \cos x(\sin 4z + 2) + 2\sin 4z = 2 \\
+        \cos x(\sin 4z + 2) + 2\sin 4z + 4- 4 = 2 \\
+        \cos x(\sin 4z + 2) + 2(\sin 4z + 2)- 4 = 2 \\
+        \cos x(\sin 4z + 2) + 2(\sin 4z + 2) = 6 \\
+        (\cos x+2)(\sin 4z + 2)= 6
+    \end{split}
+\end{equation}
+
+\subsection*{Solving Systems of Equations}
+After finishing all factoring exercises which have been assigned to the reader, the reader should have a new system of equations:
+$$
+\begin{cases}
+(2\sin y\ - 3)(\cos x\ + 2) = -10 \\
+(2\sin y\ - 3)(\sin 4x\ + 2) = -15 \\
+(\cos x\ + 2)(\sin 4x\ + 2) = 6 
+\end{cases}
+$$
+Upon realizing the three equations share the same factors, we can substitute these factors as letters to visualize it better.
+\begin{multline}
+    \text{Substitute:} \\
+    \text{Let } A = (\cos x+2) \\
+    \text{Let } B = (2\sin y-3) \\
+    \text{Let } C = (\sin 4x+2) \\
+\end{multline}
+The original system of equations can now be written as
+$$
+\begin{cases}
+    BA = -10 \\
+    BC = -15 \\
+    AC = 6
+\end{cases}
+$$
+If all three equations in the system is multiplied together:
+\begin{equation}
+    \begin{split}
+        (AB)\cdot(BC)\cdot(AC) = (-10)(-15)(6)
+    \end{split}
+\end{equation}
+
 \end{document}
