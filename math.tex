@@ -128,8 +128,86 @@ $$
 If all three equations in the system is multiplied together:
 \begin{equation}
     \begin{split}
-        (AB)\cdot(BC)\cdot(AC) = (-10)(-15)(6)
+        (AB)\cdot(BC)\cdot(AC) = (-10)(-15)(6) \\
+        A^2B^2C^2 = 900 \\
+        ABC = \pm 30 \\
+        ABC = 30 \text{ and } ABC = -30
     \end{split}
 \end{equation}
-
+If we divide ABC by the equations in our system of equations we should be able to obtain the values for the last variable.
+\begin{equation}
+    \begin{split}
+        \frac{ABC}{BA}=\frac{\pm 30}{-10} \\
+        C = \pm 3 \\ \\
+        \frac{ABC}{BC}=\frac{\pm 30}{-15} \\
+        A = \pm 2 \\ \\ 
+        \frac{ABC}{AC}=\frac{\pm 30}{6} \\
+        C = \pm 5
+    \end{split}
+\end{equation}
+We can now substitute the factors back and write a new system of equations: \newline
+$$
+\begin{cases}
+    (\cos x+2) = \pm 2 \\
+    (2\sin y-3) = \pm 5 \\
+    (\sin 4x+2) = \pm 3 
+\end{cases}
+$$
+\subsection*{Solving Trig}
+For \newline
+$$
+\begin{cases}
+    (\cos x+2) = \pm 2 \\
+    (2\sin y-3) = \pm 5 \\
+    (\sin 4x+2) = \pm 3 
+\end{cases}
+$$
+\newline
+not all values of the equation will provide real solutions therefore some values should be rejected. \newline
+$$\text{Given } (\cos x+2) = \pm 2 \text{ we can come up with these two equations}$$
+$$
+\begin{cases}
+    \cos x+2 = 2 \\
+    \cos x+2 = -2
+\end{cases}
+$$
+$$\text{From } \cos x+2 = 2 \text{ we can get } \cos x=0$$ \newline
+$$\text{From } \cos x+2 = -2 \text{ we can get } \cos x=-4$$ \newline
+$$\text{The range of } \cos x \text{ is } y\epsilon\mathbb{R}, y\epsilon [-1, 1]$$ \newline
+$$\text{We can reject } \cos x=-4 \text{ because it's outside the}$$
+$$\text{range of } \cos x\text{ and won't be providing any real solutions}$$\newline
+$$\cos x=0 \text{ is } x = \pi n \text{ and repeats every } \frac{\pi}{2}\text{ units}$$
+$$\text{therefore a general solution for }\cos x=0 \text{ is } x = \pi n + \frac{\pi}{2}, n\epsilon\mathbb{Z}$$
+The same concept can be repeated for the second equation:
+\begin{equation}
+    \begin{split}
+        2\sin y-3 = \pm 5 \\
+        2\sin y-3 = 5 \text{ and } 2\sin y-3 =-5 \\
+        2\sin y= 8 \text{ and } 2\sin y=-2 \\
+        \sin y= 4 \text{ and } \sin y=-1 \\
+        \text{Reject } \sin y=4 \\
+        \text{A solution of } \sin y=0 \text{ is } y= \frac{3\pi}{2}\\
+        \text{The period of } f(y)=\sin y \text{ is } 2\pi\\
+        y = 2\pi n + \frac{3\pi}{2}, n\epsilon\mathbb{Z}
+    \end{split}
+\end{equation}
+For the last equation:
+\begin{equation}
+    \begin{split}
+        \sin 4z+2 =\pm3 \\
+        \sin 4z+2 =3 \text{ and } \sin 4z+2 =-3 \\
+        \sin 4z =1 \text{ and } \sin 4z =-5 \\
+        \text{Reject } \sin4z = -5 \\
+        \text{Let } q=4z \\
+        \text{When } \sin q=1, q=\frac{\pi}{2} \\
+        \text{The period of } f(q)=\sin q \text{ is } 2\pi \\
+        q = 2\pi n+\frac{\pi}{2}, n\epsilon\mathbb{Z} \\
+        4z = 2\pi n+\frac{\pi}{2}, n\epsilon\mathbb{Z} \\
+        z = \frac{2\pi n+\frac{\pi}{2}}{4}, n\epsilon\mathbb{Z} \\
+        z = \frac{\pi n}{2}+\frac{\pi}{8}, n\epsilon\mathbb{Z}
+    \end{split}
+\end{equation}
+\therefore x = \pi n + \frac{\pi}{2}, n\epsilon\mathbb{Z} \newline
+ y = 2\pi n + \frac{3\pi}{2}, n\epsilon\mathbb{Z} \newline
+ z = \frac{\pi n}{2}+\frac{\pi}{8}, n\epsilon\mathbb{Z}
 \end{document}
